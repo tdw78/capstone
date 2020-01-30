@@ -9,6 +9,7 @@ const session = require("express-session");
 
  module.exports = {
     init(app, express){
+      app.use(express.static('public'));
       app.set("view engine", "ejs");
       app.set("views", viewsFolder);
       app.use(bodyParser.urlencoded({ extended: true }));
