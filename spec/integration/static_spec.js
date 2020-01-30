@@ -9,7 +9,7 @@ describe("routes : static", () => {
        
       request.get(base, (err, res, body) => {
         expect(res.statusCode).toBe(200);
-        expect(body).toContain("Welcome to Dream Party");
+        expect(body).toContain("The Party Planners");
         expect(err).toBeNull();
         done();
       });
