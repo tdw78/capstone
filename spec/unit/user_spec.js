@@ -14,7 +14,7 @@ describe("User", () => {
     });
   });
 
-  describe("#create", () => {
+  describe("#create()", () => {
     it("should create a new user account", (done) => {
         User.create({
           name: "Timbo",
@@ -47,5 +47,31 @@ describe("User", () => {
          });
      });
 
+     it("should not create a user with an email already taken", (done) => {
+          User.create({
+            name: "Tiger",
+            email: "email@email.com",
+            password: "123XYZ"
+        })
+        .then((user) => {
+          User.create({
+            name: "Joey",
+            email: "email@email.com",
+            password: "abcdefg"
+        })
+         .then((user) => {      
+          done();
+        })
+        .catch((err) => {
+         expect(err.message).toContain("Validation error");
+         done();
+       });
+         done();
+       })
+       .catch((err) => {
+        console.log(err);
+        done();
+      });
+    });
   });
 });
