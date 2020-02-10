@@ -21,8 +21,9 @@ module.exports = {
         res.redirect("/users/signUp");
   
       } else {
-  
+       
         passport.authenticate("local")(req, res, () => {
+          console.log(req.user.role);
           req.flash("notice", "You've successfully signed up!");
           res.redirect("/");
         });          

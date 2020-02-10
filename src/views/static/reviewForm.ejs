@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <% include ../static/partials/head.ejs %>
+  </head>
+
+  <body style="background-color: #FFEAD0;">
+
+    <% include ../static/partials/navbar1.ejs %>
+    
+    <div class="main">
+      <div class="text-center">
+        <h3 id="title" class="display-1" style="color: #37505C; font-family: URW Chancery; font-size: 68px;">Leave Your Review</h3>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-md-12">                 
+        <% include ../static/partials/navbar2.ejs %>
+      </div>
+    </div>
+    <br>
+    <br>
+    <div class="row">
+      <div class="col-md-3"></div>
+
+        <div class="col-md-6">
+          <form action="/reviews/form" method="post">
+
+            <ul class="navbar-nav ml-auto">
+
+              <div class="row">
+                <div class="col-md-6">
+                  <li>
+                    <input class="form-control" type="text" name="title" placeholder="Review Title">
+                  </li>
+                </div>
+                <div class="col-md-6 text-right">
+                  <li>
+                    <input type="submit" style="font-weight: bold;" value="Post Review" class="btn btn-primary" />
+                  </li>
+                </div>
+              </div>
+                  
+              <li> 
+                <textarea class="form-control" rows="9" cols="8" name="body" placeholder="Write your review"></textarea>
+              </li>
+            </ul>
+          </form>
+
+          <div class="row">
+            <div class="col-md-12 text-left">
+              <li class="navbar-nav ml-auto">
+                <input type="submit" style="font-weight: bold;" value="Add Photos" class="btn btn-outline-primary" />
+              </li>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+      
+      <br>
+      <br>
+      <br>
+      <br>
+      <% include ../static/partials/messages.ejs %>
+  </body>
+</html>

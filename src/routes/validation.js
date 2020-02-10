@@ -16,7 +16,22 @@ module.exports = {
       return next();
     }
 
+  },
+  validateReviews(req, res, next){
+      if(method === "POST"){
+         req.checkBody("title", "title must be at least 2 characters long").isLength({ min: 2});
+         req.checkBody("body", "body must be at least 10 characters long").isLength({ min: 10});
+      }
+      
+      const errors = req.validationErrors();
+
+      if(errors){
+        req.flash("error", errors);
+        return res.redirect(req.headers.referer);
+      } else {
+        return next();
+      }
+
   }
   
-
 }

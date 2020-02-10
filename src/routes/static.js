@@ -7,7 +7,6 @@ router.get("/products", staticController.products);
 router.get("/gallery", staticController.gallery);
 router.get("/contact", staticController.contact);
 router.get("/about", staticController.about);
-router.get("/reviews", staticController.reviews);
 
 router.get("/gallery/decorations", staticController.decorations);
 router.get("/gallery/decorations/decorSlideshow", staticController.decorSlideshow);

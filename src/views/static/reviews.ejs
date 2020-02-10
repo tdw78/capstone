@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <% include ./partials/head.ejs %>
+  </head>
+  <body style="background-color: #FFEAD0;">
+  
+  <% include ./partials/navbar1.ejs %>
+    
+   <% include ./partials/messages.ejs %>
+    <div class="main">
+      <div class="text-center">
+        <h1 id="title" class="display-1" style="color: #37505C; font-family: URW Chancery; font-size: 128px;">Customer Reviews</h1>
+      </div>
+    </div>
+    <br>
+    
+    <div class="row">
+      <div class="col-md-12">                 
+        <% include ./partials/navbar2.ejs %>
+      </div>
+    </div>
+
+<% if(currentUser) { %>
+  <form action="reviews/form" method="get">
+    <div class="text-center">
+      <button type="submit" class="btn btn-primary">Leave Your Review</button>
+    </div>
+  </form>
+<% } %>
+<h1 class="text-center"  style="font-size: 48px; 
+           font-family: 'Times New Roman', Times, serif; 
+           font-style: italic; color:orchid;
+           font-weight: bold;" >Here are our customer reviews</h1>
+
+<br>
+<br>
+
+<div class="row">
+  <div class="col-md-4"></div>
+  <div class="col-md-4 text-center"> 
+    <ul class="list-group navbar-nav ml-auto" style="font-size: 22px; 
+               font-family: 'Times New Roman', Times, serif; 
+               font-style: italic; color:orchid;
+               font-weight: bold;" >    
+      <% reviews.forEach((review) => { %>
+        <div style="border-style: solid;">
+          <li class="list-group-item">
+            <%= review.title %>:
+          </li>
+          <li class="list-group-item"> 
+            <div style="max-width:400px;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;">
+              <%= review.body %>
+            <div>
+            <br>
+            <br>
+            <a href="/reviews/<%= review.id %>"> <p style="font-size: 14px;">See full review</p></a>
+          </li>
+          <% if(currentUser && currentUser.id === review.userId) { %>
+            <div class="row">
+              <div class=" col-md-6 text-right">
+                <form action="/reviews/<%= review.id %>/destroy" method="post">
+                  <button class="btn btn-primary" type="submit" value="Delete" 
+                          onclick="alert('Are you sure that you want to delete this review?')" >Delete</button>
+                </form>
+              </div>
+                <br>
+                <div class="col-md-6 text-left">
+                <form action="/reviews/<%= review.id %>/edit" method="get">
+                  <button class="btn btn-primary" type="submit" value="Edit">Edit</button>
+                </form>
+            </div>
+            <div class="col-md-2"></div>
+          </div>
+          <% } else { %>
+            <% } %>
+        </div>
+          <br>
+      <% }) %>
+    </ul>
+  </div>
+  <div class="col-md-4"></div>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+
+    <% include ./partials/baseLinks.ejs %>
+    <% include ./partials/baseScripts.ejs %>
+    <br>
+  </body>
+</html>
