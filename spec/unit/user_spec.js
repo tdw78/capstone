@@ -6,7 +6,7 @@ describe("User", () => {
   beforeEach((done) => {
     sequelize.sync({force: true})
     .then(() => {
-        done();
+      done();
     })
     .catch((err) => {
       console.log(err);

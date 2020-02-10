@@ -15,9 +15,6 @@ module.exports = {
   about(req, res, next){
     res.render("static/about");
   },
-  reviews(req, res, next){
-    res.render("static/reviews");
-  },
   decorations(req, res, next){
     res.render("albums/decorations");
   },
@@ -55,4 +52,5 @@ module.exports = {
    inviteSlideshow(req, res, next){
       res.render("albums/inviteSlideshow");
    }
+   
 }

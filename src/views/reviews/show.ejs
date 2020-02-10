@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <% include ../static/partials/head.ejs %>
+  </head>
+  <body style="background-color: #FFEAD0;">
+    <div class= "row">
+      <div class="col-md-12 text-right">
+        <% include ../static/partials/navbar1.ejs %>
+      </div>
+      <div class="col-md-10 text-right">
+        <a class="nav-link" style="color: purple; font-weight: bold; font-size: 19px" href="/reviews">Back to Reviews</a>
+      </div>
+    </div>
+<br>
+<br>
+
+    <div class= "row"> 
+      <div class= "col-md-2"></div>
+      <div class="col-md-8 text-center">
+        <ul class="list-group navbar-nav ml-auto" style="font-family: 'Times New Roman', Times, serif; 
+                  color:orchid;
+                  font-weight: bold;">
+           <li> 
+            <h1 style= "text-decoration: underline; font-size: 44px;""><%= review.title %></h1>
+          </li>
+          <br>
+          <li>
+            <div class="text-left" style= "word-wrap: break-word;">  
+              <h1 style="font-size: 28px;"><%= review.body %></h1>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-2"></div>
+    </div>
+
+<!-- <% if(currentUser) { %>
+  <div class="row">
+    <div class=" col-md-10 text-right">
+      <form action="/reviews/<%= review.id %>/destroy" method="post">
+        <button class="btn btn-primary" type="submut" value="Delete">Delete</button>
+      </form>
+      <br>
+      <form action="/reviews/<%= review.id %>/edit" method="get">
+        <button class="btn btn-primary" type="submut" value="Edit">Edit</button>
+      </form>
+  </div>
+  <div class="col-md-2"></div>
+</div>
+<% } %> -->
+<br>
+<br>
+<br>
+<br>
+
+    
+    <br>
+  </body>
+</html>
