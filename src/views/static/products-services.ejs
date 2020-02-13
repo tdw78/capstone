@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <% include ./partials/head.ejs %>
+  </head>
+  <body style="background-color: #FFEAD0;">
+  
+  <% include ./partials/navbar1.ejs %>
+    
+   <% include ./partials/messages.ejs %>
+    <div class="main">
+      <div class="text-center">
+        <h1 id="title" class="display-1" style="color: #37505C; font-family: URW Chancery; font-size: 108px;">Our Products and Services</h1>
+      </div>
+    </div>
+    <br>
+    
+    <div class="row">
+      <div class="col-md-12">                 
+        <% include ./partials/navbar2.ejs %>
+      </div>
+    </div>
+    <br>
+    <br>
+
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-4 text-center">
+        <h2 style="font-size: 65px; text-decoration: underline; 
+        font-family: 'Times New Roman', Times, serif; 
+       font-style: italic; color:orchid;
+       font-weight: bold;">Products</h2>
+       <br>
+        <ul class="navbar-nav ml-auto" style="color: #F76F8E; font-weight: bold; font-size: 28px;">
+          <% if(currentUser) { %> 
+            <li>
+              <a href="/products/tables_chairs"> <p>Tables and Chairs</p></a>
+            </li>
+            <li>
+              <a href="/products/centerpieces"> <p>Centerpieces</p></a>
+            </li>
+            <li>
+              <a href="/products/invitations"> <p>Wedding Invitations</p></a>
+            </li>
+            <li>
+              <a href="/products/bouquets"> <p>Bridal Bouquets</p></a>
+            </li>
+          <% } else { %>
+            <li>
+              <p>Tables and Chairs</p>
+            </li>
+            <li>
+              <p>Centerpieces</p>
+            </li>
+            <li>
+              <p>Wedding Invitations</p>
+            </li>
+            <li>
+              <p>Bridal Bouquets</p>
+            </li>
+          <% } %>
+        </ul>
+      </div>    
+
+    <div class="col-md-4 text-center">
+      <h2 style="font-size: 65px; text-decoration: underline;
+        font-family: 'Times New Roman', Times, serif; 
+       font-style: italic; color:orchid;
+       font-weight: bold;" >Services</h2>
+       <br>
+      <ul class="navbar-nav ml-auto" style="color: #F76F8E; font-weight: bold; font-size: 28px; " >
+       <% if(currentUser) { %> 
+         <li>
+           <a href="/services/photography"> <p>Photography</p></a>
+         </li>
+         <li>
+           <a href="/services/music"> <p>Music</p></a>
+         </li>
+         <li>
+           <a href="/services/catering"> <p>Catering</p></a>
+         </li>
+      <li>
+           <a href="/services/limos"> <p>Limousines</p></a>
+         </li>
+       <% } else { %>
+         <li>
+           <p>Photography</p>
+         </li>
+         <li>
+           <p>Music</p>
+         </li>
+         <li>
+           <p>Catering</p>
+         </li>
+         <li>
+           <p>Limousines</p>
+         </li>
+      <% } %>
+      </ul>
+    <div class="col-md-2"></div>
+  </div>
+
+  </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <% include ./partials/baseLinks.ejs %>
+    <% include ./partials/baseScripts.ejs %>
+    <br>
+  </body>
+</html>

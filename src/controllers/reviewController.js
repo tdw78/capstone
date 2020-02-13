@@ -14,7 +14,10 @@ module.exports = {
           res.render("static/reviews", {reviews});
         }
       })
-    } 
+    } else {
+      req.flash("notice", "You are not authorized to do that.");
+      res.redirect("/reviews");
+    }
   },
    reviewForm(req, res, next){
      const authorized = new Authorizer(req.user).new();

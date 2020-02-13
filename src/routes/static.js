@@ -3,10 +3,11 @@ const router = express.Router();
 const staticController = require("../controllers/staticController.js");
 
 router.get("/", staticController.home);
-router.get("/products", staticController.products);
 router.get("/gallery", staticController.gallery);
 router.get("/contact", staticController.contact);
 router.get("/about", staticController.about);
+
+router.get("/products_services", staticController.productsServices);
 
 router.get("/gallery/decorations", staticController.decorations);
 router.get("/gallery/decorations/decorSlideshow", staticController.decorSlideshow);

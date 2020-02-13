@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <% include ./partials/head.ejs %>
+  </head>
+  <body style="background-color: #FFEAD0;">
+  
+  <% include ./partials/navbar1.ejs %>
+    
+   <% include ./partials/messages.ejs %>
+    <div class="main">
+      <div class="text-center">
+        <h1 id="title" class="display-1" style="color: #37505C; font-family: URW Chancery; font-size: 128px;">Our Services</h1>
+      </div>
+    </div>
+    <br>
+    
+    <div class="row">
+      <div class="col-md-12">                 
+        <% include ./partials/navbar2.ejs %>
+      </div>
+    </div>
+    <br>
+
+    <div class="row"> 
+
+    <div class="col-md-12 text-center">
+      <h2>Services</h2>
+      <ul>
+        <% services.forEach((service) => { %>
+          <% if(currentUser) { %>     
+            <a href="/products/<%= service.id %>"> <p style="font-size: 14px;"><%= service.name %></p></a>
+          <% } else { %>
+            <p style="font-size: 14px;"><%= service.name %></p>
+          <% } %>
+          <% }) %>
+      </ul>
+    </div> 
+
+
+  </div>
+    <br>
+    <br>
+    <% include ./partials/baseLinks.ejs %>
+    <% include ./partials/baseScripts.ejs %>
+    <br>
+  </body>
+</html>

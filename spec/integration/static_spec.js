@@ -85,4 +85,13 @@ describe("routes : static", () => {
        });
     });
   });
+  describe("GET /products_services", () => {
+     it("should render the products and services index page", (done) => {
+       request.get(`${base}products_services`, (err, res, body) => {
+          expect(err).toBeNull();
+          expect(body).toContain("Our Products and Services");
+          done();
+       });
+     });
+  });
 });
