@@ -18,7 +18,7 @@ module.exports = {
 
   },
   validateReviews(req, res, next){
-      if(method === "POST"){
+      if(req.method === "POST"){
          req.checkBody("title", "title must be at least 2 characters long").isLength({ min: 2});
          req.checkBody("body", "body must be at least 10 characters long").isLength({ min: 10});
       }

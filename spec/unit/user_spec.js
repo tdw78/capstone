@@ -32,7 +32,7 @@ describe("User", () => {
         });
     });
 
-     it("should not creat a user with input that doesn't meet validation standards", (done) => {
+     it("should not create a user with input that doesn't meet validation standards", (done) => {
          User.create({
            name: "Timbo",
            email: "timbo@mail.com",

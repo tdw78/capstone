@@ -268,7 +268,7 @@ describe("routes : reviews", () => {
         .then((reviews) => {
           const reviewCountBeforeDelete = reviews.length;
 
-          expect(reviewsCountBeforeDelete).toBe(1);
+          expect(reviewCountBeforeDelete).toBe(1);
 
           request.post(`${base}${this.review.id}/destroy`, (err, res, body) => {
             Review.findAll()
