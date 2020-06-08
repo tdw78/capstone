@@ -27,6 +27,10 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: "userId",
       as: "reviews"
     });
+    User.belongsToMany(models.CartItem, {
+      foreignKey: "userId",
+      as: "items"
+    })
   };
   User.prototype.isAdmin = function() {
     return this.role === "admin";

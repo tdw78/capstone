@@ -27,4 +27,6 @@ router.get("/gallery/reception/receptionSlideshow", staticController.receptionSl
 router.get("/gallery/invitations", staticController.invitations);
 router.get("/gallery/invitations/inviteSlideshow", staticController.inviteSlideshow);
 
+router.get("/cart", staticController.cart);
+
 module.exports = router;
