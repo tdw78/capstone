@@ -24,24 +24,30 @@
 <div class="row">      
 
         <div class="col-md-4 text-center">
-          <a href="/products/invitations" style="font-size: 34px; 
+
+          
+          <form action="/products" method="post">
+            <a href="/products/bouquets" style="font-size: 34px; 
                    font-family: 'Times New Roman', Times, serif; 
                    font-style: italic; color:orchid;
                    font-weight: bold;" ><p>Bouquet #1</p> </a>
-           <img src="/products/bouquets/bouquet1.jpg" class="img-fluid" alt="Table" style="height: 250px">
-           <p style="font-size: 24px; 
+            <img src="/products/bouquets/bouquet1.jpg" class="img-fluid" alt="Table" style="height: 250px">
+            <p style="font-size: 24px; 
                      font-family: 'Times New Roman', Times, serif; 
                      font-style: italic; color:orchid;
                      font-weight: bold;">Price: $100</p>
-          <a href="products/cart/${product.id}"><p style="font-size: 22px; 
+         
+            <button type="submit" class="btn btn-primary">Add to Cart</button>
+          </form>
+          <!-- <a href="/cart"><p style="font-size: 22px; 
                    font-family: 'Times New Roman', Times, serif; 
                    font-style: italic; color:orchid;
-                   font-weight: bold;">Add to Cart</p></a> 
+                   font-weight: bold;">Add to Cart</p></a>  -->
         </div>
 
       
         <div class="col-md-4 text-center">
-          <a href="/products/invitations" style="font-size: 34px; 
+          <a href="/products/bouquets" style="font-size: 34px; 
                    font-family: 'Times New Roman', Times, serif; 
                    font-style: italic; color:orchid;
                    font-weight: bold;" ><p>Bouquet #2</p> </a>
@@ -50,14 +56,17 @@
                      font-family: 'Times New Roman', Times, serif; 
                      font-style: italic; color:orchid;
                      font-weight: bold;">Price: $150</p>
-          <a href="products/cart"><p style="font-size: 22px; 
+            <form action="/cart" method="post">
+              <button type="submit" class="btn btn-primary">Add to Cart</button>
+            </form>          
+          <!-- <a href="/cart"><p style="font-size: 22px; 
                    font-family: 'Times New Roman', Times, serif; 
                    font-style: italic; color:orchid;
-                   font-weight: bold;">Add to Cart</p></a> 
+                   font-weight: bold;">Add to Cart</p></a>  -->
         </div>
         
         <div class="col-md-4 text-center">
-          <a href="/products/invitations" style="font-size: 34px; 
+          <a href="/products/bouquets" style="font-size: 34px; 
                    font-family: 'Times New Roman', Times, serif; 
                    font-style: italic; color:orchid;
                    font-weight: bold;" ><p>Bouquet #3</p> </a>
@@ -66,14 +75,17 @@
                      font-family: 'Times New Roman', Times, serif; 
                      font-style: italic; color:orchid;
                      font-weight: bold;">Price: $175</p>
-          <a href="products/cart"><p style="font-size: 22px; 
+            <form action="/cart" method="post">
+              <button type="submit" class="btn btn-primary">Add to Cart</button>
+            </form>         
+          <!-- <a href="/cart"><p style="font-size: 22px; 
                    font-family: 'Times New Roman', Times, serif; 
                    font-style: italic; color:orchid;
-                   font-weight: bold;">Add to Cart</p></a> 
+                   font-weight: bold;">Add to Cart</p></a>  -->
         </div>
 
         <div class="col-md-4 text-center">
-          <a href="/products/invitations" style="font-size: 34px; 
+          <a href="/products/bouquets" style="font-size: 34px; 
                    font-family: 'Times New Roman', Times, serif; 
                    font-style: italic; color:orchid;
                    font-weight: bold;" ><p>Bouquet #4</p> </a>
@@ -82,10 +94,13 @@
                      font-family: 'Times New Roman', Times, serif; 
                      font-style: italic; color:orchid;
                      font-weight: bold;">Price: $125</p>
-          <a href="products/cart"><p style="font-size: 22px; 
+            <form action="/cart" method="post">
+              <button type="submit" class="btn btn-primary">Add to Cart</button>
+            </form>          
+          <!-- <a href="/cart"><p style="font-size: 22px; 
                    font-family: 'Times New Roman', Times, serif; 
                    font-style: italic; color:orchid;
-                   font-weight: bold;">Add to Cart</p></a> 
+                   font-weight: bold;">Add to Cart</p></a>  -->
         </div>
   
 </div>

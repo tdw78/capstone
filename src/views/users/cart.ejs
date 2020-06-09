@@ -20,6 +20,18 @@
         <% include ../static/partials/navbar2.ejs %>
       </div>
     </div>
+
+    <main class="container">
+      <ul class="list-group">
+        <% items.forEach((item) => { %>
+            <li class="list-group-item">
+              <p> <%- item.name %> </a>
+              <p> <%- item.price %> </a>
+            </li>
+           <% }) %>
+      </ul>
+    </main>
+
     <br>
     <br>
     <br>

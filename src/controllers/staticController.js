@@ -51,9 +51,6 @@ module.exports = {
    },
    inviteSlideshow(req, res, next){
       res.render("albums/inviteSlideshow");
-   },
-   cart(req, res, next){
-    res.render("users/cart");
- }
+   }
    
 }

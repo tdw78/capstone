@@ -5,6 +5,7 @@ module.exports = {
     const reviewRoutes = require("../routes/reviews");
     const productRoutes = require("../routes/products");
     const serviceRoutes = require("../routes/services");
+    const cartIemRoutes = require("../routes/cartItems");
 
     if(process.env.NODE_ENV === "test") {
       const mockAuth = require("../../spec/support/mock-auth.js");
@@ -16,6 +17,7 @@ module.exports = {
     app.use(reviewRoutes);
     app.use(productRoutes);
     app.use(serviceRoutes);
+    app.use(cartIemRoutes);
   
   }
 }
